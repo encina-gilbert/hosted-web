@@ -65,7 +65,7 @@ const createTableData = () => {
     stationName.forEach((stn, i) => {
       htmlTr += `
             <tr>
-                <td>${station.toUpperCase()}</td>
+                <td>${formatLabel(station)}</td>
                 <td class='tooltip'>${testplanName}</td>
                 <td>${i + 1}</td>
                 <td class='tooltip'>${stationName[i]}</td>
