@@ -127,6 +127,6 @@ tableEl.querySelector('tbody').addEventListener('click', (e) => {
 });
 
 // Initializing the options
-const htmlLines = productLines.map(generateRadioInput).join('');
+const htmlLines = productLines.sort().map(generateRadioInput).join('');
 optionsContainerEl.innerHTML = htmlLines;
 const optionsEl = document.querySelectorAll('.option');
