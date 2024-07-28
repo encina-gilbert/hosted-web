@@ -67,6 +67,21 @@ const data = {
       stationName: ["BBS50250_L01S01"],
     },
   },
+  // FORD LDM
+  ford_ldm: {
+    ict: {
+      testplanName: "ICT",
+      stationName: ["BBS21110_L01S01"],
+    },
+    flash: {
+      testplanName: "FLASH",
+      stationName: ["BBS21120_L01S01"],
+    },
+    eol: {
+      testplanName: "EOL",
+      stationName: ["BBS21210_L01S01", "BBS21210_L01S02"],
+    },
+  },
   // HLI LINE 1
   hli_1: {
     ict: {
@@ -159,8 +174,16 @@ const data = {
       stationName: ["BBS04220_L04S01", "BBS04220_L04S02"],
     },
   },
-  // PHD AND LSM
-  phd_and_lsm: {
+  // PHD
+  phd: {
+    pin_insertion: {
+      testplanName: "PININSERTION",
+      stationName: ["BBS04020_L03S01"],
+    },
+    milling: {
+      testplanName: "ASYS_MILLING",
+      stationName: ["BBS23110_L01S01"],
+    },
     ict: {
       testplanName: "ICT_TERADYNE",
       stationName: ["BBS23120_L01S01"],
@@ -173,6 +196,38 @@ const data = {
       testplanName: "FKT",
       stationName: ["BBS23140_L01S01", "BBS23140_L01S02"],
     },
+    shield_assembly: {
+      testplanName: "SHIELD_ASSEMBLY",
+      stationName: ["BBS23150_L01S01"],
+    },
+    camera_check_of_shield_assembly: {
+      testplanName: "CAMERA_CHECK_OF_SHIELD_ASSEMBLY",
+      stationName: ["BBS23156_L01S01"],
+    },
+    dispensing_and_aoi: {
+      testplanName: "DISPENSINGAOI",
+      stationName: ["BBS23170_L01S01"],
+    },
+    pcb_cover_assembly: {
+      testplanName: "PCB_COVER_ASSEMBLY",
+      stationName: ["BBS23180_L01S01"],
+    },
+    plastic_laser: {
+      testplanName: "PLASTIC_LASER",
+      stationName: ["BBS23190_L01S01"],
+    },
+    assembly: {
+      testplanName: "ASSEMBLY",
+      stationName: ["BBS23200_L01S01"],
+    },
+    metal_riveting: {
+      testplanName: "METAL_RIVETING",
+      stationName: ["BBS23210_L01S01"],
+    },
+    metal_rivet_check: {
+      testplanName: "METAL_RIVET_CHECK",
+      stationName: ["BBS23216_L01S01"],
+    },
     eol: {
       testplanName: "EOL",
       stationName: ["BBS23230_L01S01", "BBS23230_L01S02"],
@@ -180,6 +235,57 @@ const data = {
     leak: {
       testplanName: "LEAK",
       stationName: ["BBS23240_L01S01", "BBS23240_L01S02"],
+    },
+    pin_check: {
+      testplanName: "PINCHECK",
+      stationName: ["BBS23250_L01S01"],
+    },
+    metal_laser: {
+      testplanName: "METAL_LASER",
+      stationName: ["BBS23260_L01S01"],
+    },
+    metal_laser_check: {
+      testplanName: "METAL_LASER_CHECK",
+      stationName: ["BBS23270_L01S01"],
+    },
+  },
+  // LSM
+  lsm: {
+    pin_insertion: {
+      testplanName: "PININSERTION",
+      stationName: ["BBS04020_L03S01"],
+    },
+    milling: {
+      testplanName: "ASYS_MILLING",
+      stationName: ["BBS23110_L01S01"],
+    },
+    ict: {
+      testplanName: "ICT_TERADYNE",
+      stationName: ["BBS23120_L01S01"],
+    },
+    flash: {
+      testplanName: "FLASH",
+      stationName: ["BBS23130_L01S01", "BBS23130_L01S02"],
+    },
+    ir_riveting: {
+      testplanName: "IR RIVETING",
+      stationName: ["BBS23160_L01S01"],
+    },
+    rivet_check: {
+      testplanName: "RIVETCHECK",
+      stationName: ["BBS23166_L01S01"],
+    },
+    dmd_cap_removal: {
+      testplanName: "DMD_CAP_REMOVAL",
+      stationName: ["BBS23220_L01S01"],
+    },
+    eol: {
+      testplanName: "EOL",
+      stationName: ["BBS23230_L01S01", "BBS23230_L01S02"],
+    },
+    pin_check: {
+      testplanName: "PINCHECK",
+      stationName: ["BBS23250_L01S01"],
     },
   },
   // VOLVO HCM
@@ -203,21 +309,6 @@ const data = {
     leak: {
       testplanName: "LEAKAGETEST",
       stationName: ["BBS19290_L01S01", "BBS19290_L01S02"],
-    },
-  },
-  // FORD LDM
-  ford_ldm: {
-    ict: {
-      testplanName: "ICT",
-      stationName: ["BBS21110_L01S01"],
-    },
-    flash: {
-      testplanName: "FLASH",
-      stationName: ["BBS21120_L01S01"],
-    },
-    eol: {
-      testplanName: "EOL",
-      stationName: ["BBS21210_L01S01", "BBS21210_L01S02"],
     },
   },
   // MAGNA
