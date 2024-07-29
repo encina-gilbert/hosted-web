@@ -153,8 +153,16 @@ const data = {
   },
   // HLI LINE 4
   hli_4: {
+    pin_insertion: {
+      testplanName: "PININSERTION",
+      stationName: ["BBS04020_L01S01"],
+    },
+    milling: {
+      testplanName: "ASYS_MILLING",
+      stationName: ["BBS04050_L04S01"],
+    },
     ict: {
-      testplanName: "ICT_TERADYNE",
+      testplanName: "ICT_TERADYNE_4",
       stationName: ["BBS04060_L04S01"],
     },
     flash: {
@@ -165,6 +173,38 @@ const data = {
       testplanName: "FKT",
       stationName: ["BBS04080_L04S01", "BBS04080_L04S02"],
     },
+    shield_assembly: {
+      testplanName: "SHIELDASSEMBLY",
+      stationName: ["BBS04300_L04S01"],
+    },
+    gap_filler: {
+      testplanName: "GAPFILLER",
+      stationName: ["BBS04340_L04S01"],
+    },
+    dow_corning: {
+      testplanName: "DOWCORNING",
+      stationName: ["BBS04350_L04S01"],
+    },
+    gfdc: {
+      testplanName: "GFDC",
+      stationName: ["BBS04360_L04S01"],
+    },
+    housing_assembly: {
+      testplanName: "HOUSINGASSEMBLY",
+      stationName: ["BBS04370_L04S01"],
+    },
+    screwing: {
+      testplanName: "SCREWING_L04",
+      stationName: ["BBS04380_L04S01"],
+    },
+    lasering: {
+      testplanName: "LASERING",
+      stationName: ["BBS04390_L04S01"],
+    },
+    laser_label: {
+      testplanName: "LASER_LABEL2",
+      stationName: ["BBS04400_L04S01"],
+    },
     eol: {
       testplanName: "EOL",
       stationName: ["BBS04210_L04S01", "BBS04210_L04S02"],
@@ -172,6 +212,10 @@ const data = {
     leak: {
       testplanName: "LEAK",
       stationName: ["BBS04220_L04S01", "BBS04220_L04S02"],
+    },
+    pin_check: {
+      testplanName: "PINCHECK_L04",
+      stationName: ["BBS04230_L04S01"],
     },
   },
   // PHD
