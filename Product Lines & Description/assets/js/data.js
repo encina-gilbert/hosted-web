@@ -152,6 +152,7 @@ const stationsData = {
 
 // Producing materials per line
 const materialsPerLine = {
+  ford_bcm: ["A2C7883160400"],
   phd: ["A2C7825771500"],
   lsm: ["A2C7825760500"],
   hli_2: ["A2C7822600500", "A2C7822720500"],
@@ -162,6 +163,8 @@ const materialsPerLine = {
 
 // Materials description
 const materialDescription = {
+  // FORD BCM
+  A2C788316: "BCU FOR MY24 V363 ICA3 Var B W2",
   // PHD
   A2C782577: "LCM PHD 2.2",
   // LSM
