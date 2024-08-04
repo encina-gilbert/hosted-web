@@ -289,9 +289,6 @@ h3 {
         padding-block: 10px 15px;
         font-weight: 300;
 
-        &:nth-child(2) {
-          width: 50px;
-        }
         &:nth-child(odd) {
           width: 160px;
         }
@@ -320,6 +317,10 @@ h3 {
       }
     }
   }
+}
+
+#station__table th:nth-child(2) {
+  width: 50px;
 }
 
 @media screen and (min-width: 550px) {
