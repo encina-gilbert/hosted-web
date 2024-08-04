@@ -106,11 +106,29 @@ const stationsData = {
   },
   // VOLVO HCM
   volvo_hcm: {
+    pin_insertion: ["BBS04020_L04S01"],
     ict: ["BBS19120_L01S01", "BBS19120_L01S02"],
     flash: ["BBS19130_L01S01", "BBS19130_L01S02"],
     function: ["BBS19140_L01S01", "BBS19140_L01S02"],
+    gap_filling: ["BBS19150_L01S01"],
+    gap_filling_camera: ["BBS19160_L01S01"],
+    pcb_assembly: ["BBS19166_L01S01"],
+    riveting: ["BBS19170_L01S01"],
+    plasma_cleaning: ["BBS19180_L01S01"],
+    rivet_check: ["BBS19186_L01S01"],
+    shield_assembly: ["BBS19190_L01S01"],
+    shield_assembly_check: ["BBS19200_L01S01"],
+    dow_corning: ["BBS19210_L01S01"],
+    dow_corning_camera: ["BBS19220_L01S01"],
+    laser: ["BBS19230_L01S01"],
+    laser_check: ["BBS19240_L01S01"],
+    cover: ["BBS19250_L01S01"],
+    curing: ["BBS19260_L01S01"],
+    gasket_assembly: ["BBS19270_L01S01"],
     eol: ["BBS19280_L01S01", "BBS19280_L01S02"],
     leak: ["BBS19290_L01S01", "BBS19290_L01S02"],
+    pin_check: ["BBS19300_L01S01"],
+    gasket_clip_check: ["BBS19306_L01S01"],
   },
   // MAGNA
   magna: {
@@ -139,6 +157,7 @@ const materialsPerLine = {
   hli_2: ["A2C7822600500"],
   hli_3: ["A2C7822600500"],
   hli_4: ["A2C7822600500"],
+  volvo_hcm: ["A2C7875820300"],
 };
 
 // Materials description
@@ -149,4 +168,6 @@ const materialDescription = {
   A2C782576: "LCM LSM 2.2",
   // HLI
   A2C782260: "LCM MB MRA2 LECU RD 6K PSI5 SH",
+  // VOLVO HCM
+  A2C787582: "LCM VOLVO HCM1.2_re HIGH",
 };
