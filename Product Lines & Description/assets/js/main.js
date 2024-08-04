@@ -1,15 +1,20 @@
 // Product lines
-const productLines = Object.keys(data);
+const productLines = Object.keys(stationsData);
 let selectedLine = null;
 
-const selectedEl = document.querySelector('.selected');
-const optionsContainerEl = document.querySelector('.options');
-const searchBoxEl = document.getElementById('search-box');
-const tableEl = document.getElementById('table');
+const selectedEl = document.querySelector(".selected");
+const optionsContainerEl = document.querySelector(".options");
+const searchBoxEl = document.getElementById("search-box");
+const tableEl = document.querySelector(".table__container");
+const tablesEls = tableEl.querySelectorAll(".table");
+const tableSwitch = document.getElementById("table__switch");
+const selectionEl = document.querySelector(".selection");
+const stationTableEl = document.getElementById("station__table");
+const materialTableEl = document.getElementById("material__table");
 
 // Helper functions
 const formatLabel = (label) => {
-  return label.toUpperCase().replaceAll('_', ' ').replaceAll('AND', '&');
+  return label.toUpperCase().replaceAll("_", " ").replaceAll("AND", "&");
 };
 
 const generateRadioInput = (line) => {
@@ -20,104 +25,111 @@ const generateRadioInput = (line) => {
     `;
 };
 
-const isActive = () => optionsContainerEl.classList.contains('active');
+const isActive = () => optionsContainerEl.classList.contains("active");
 
 const checkForRadioSelected = () => {
   if (isActive() || !selectedLine) {
-    tableEl.style.display = 'none';
-    tableEl.style.opacity = '0';
+    tableEl.classList.remove("show");
+    selectionEl.classList.remove("show");
   } else {
     setTimeout(() => {
-      tableEl.style.display = 'block';
-      tableEl.style.opacity = '1';
+      tableEl.classList.add("show");
+      selectionEl.classList.add("show");
     }, 200);
   }
 };
 
 const unchecked = () => {
-  document.querySelectorAll('.option').forEach((o) => o.classList.remove('checked'));
+  document
+    .querySelectorAll(".option")
+    .forEach((o) => o.classList.remove("checked"));
 };
 
 const filterList = (query) => {
   query = query.toLowerCase();
-  document.querySelectorAll('.option').forEach((o) => {
-    o.style.display = o.textContent.toLowerCase().includes(query) ? 'block' : 'none';
+  document.querySelectorAll(".option").forEach((o) => {
+    o.style.display = o.textContent.toLowerCase().includes(query)
+      ? "block"
+      : "none";
   });
 };
 
-const div = document.createElement('div');
-div.id = 'gbe';
-div.style.cssText =
-  'position:absolute;width:50px;height:25px;font-size:12px;opacity:0.1;z-index:100;text-align:center;rotate:-45deg;bottom:24px;right:14px;font-weight:100';
-div.innerHTML = '<span>gbe</span>';
-document.body.appendChild(div);
 // Fill table data
 const createTableData = () => {
-  const stations = Object.keys(data[selectedLine]);
-  let htmlTr = '';
+  const stations = Object.keys(stationsData[selectedLine]);
+  let htmlStation = "";
+  let htmlMaterial = "";
 
   stations.forEach((station) => {
-    const stationData = data[selectedLine][station];
-    const [testplanKey, stationNameKey] = Object.keys(stationData);
-    const testplanName = stationData[testplanKey];
-    const stationName = stationData[stationNameKey];
+    const stationNames = stationsData[selectedLine][station];
 
-    stationName.forEach((stn, i) => {
-      htmlTr += `
+    stationNames.forEach((stn, i) => {
+      htmlStation += `
             <tr>
                 <td>${formatLabel(station)}</td>
-                <td class='tooltip'>${testplanName}</td>
                 <td>${i + 1}</td>
-                <td class='tooltip'>${stationName[i]}</td>
+                <td class='tooltip'>${stationNames[i]}</td>
             </tr>
         `;
     });
   });
 
-  tableEl.querySelector('tbody').innerHTML = htmlTr;
+  stationTableEl.querySelector("tbody").innerHTML = htmlStation;
+
+  materialsPerLine[selectedLine]?.sort().forEach((mat) => {
+    const desc = materialDescription[mat.substring(0, 9)];
+    htmlMaterial += `
+            <tr>
+                <td class='tooltip'>${mat}</td>
+                <td>${desc}</td>
+            </tr>
+    `;
+  });
+
+  materialTableEl.querySelector("tbody").innerHTML = htmlMaterial;
 };
 
 // Event Listeners
-window.addEventListener('DOMContentLoaded', checkForRadioSelected);
+window.addEventListener("DOMContentLoaded", checkForRadioSelected);
 
 if (selectedEl) {
-  selectedEl.addEventListener('click', () => {
-    optionsContainerEl.classList.toggle('active');
+  selectedEl.addEventListener("click", () => {
+    optionsContainerEl.classList.toggle("active");
     checkForRadioSelected();
     if (isActive()) {
-      tableEl.style.display = 'none';
-      searchBoxEl.value = '';
+      tableEl.classList.remove("show");
+      searchBoxEl.value = "";
       searchBoxEl.focus();
     }
-    optionsEl.forEach((o) => (o.style.display = 'block'));
+    optionsEl.forEach((o) => (o.style.display = "block"));
   });
 }
 
 if (optionsContainerEl) {
-  optionsContainerEl.addEventListener('click', (e) => {
+  optionsContainerEl.addEventListener("click", (e) => {
     const label = e.target;
-    if (label.tagName.toLowerCase() === 'label') {
+    if (label.tagName.toLowerCase() === "label") {
       selectedLine = document.getElementById(label.htmlFor).value.toLowerCase();
       selectedEl.textContent = label.textContent;
       createTableData();
-      optionsContainerEl.classList.remove('active');
+      optionsContainerEl.classList.remove("active");
       checkForRadioSelected();
       unchecked();
-      label.classList.add('checked');
-      searchBoxEl.value = '';
+      label.classList.add("checked");
+      searchBoxEl.value = "";
     }
   });
 }
 
-searchBoxEl.addEventListener('keyup', (e) => {
+searchBoxEl.addEventListener("keyup", (e) => {
   filterList(e.target.value);
 });
 
-tableEl.querySelector('tbody').addEventListener('click', (e) => {
+tableEl.addEventListener("click", (e) => {
   const dataValue = e.target;
-  if (dataValue.classList.contains('tooltip')) {
+  if (dataValue.classList.contains("tooltip")) {
     const tippyInstance = tippy(dataValue, {
-      content: 'copied',
+      content: "copied",
     });
     navigator.clipboard.writeText(dataValue.textContent);
 
@@ -127,6 +139,12 @@ tableEl.querySelector('tbody').addEventListener('click', (e) => {
 });
 
 // Initializing the options
-const htmlLines = productLines.sort().map(generateRadioInput).join('');
+const htmlLines = productLines.sort().map(generateRadioInput).join("");
 optionsContainerEl.innerHTML = htmlLines;
-const optionsEl = document.querySelectorAll('.option');
+const optionsEl = document.querySelectorAll(".option");
+
+tableSwitch.addEventListener("change", () => {
+  tableSwitch.checked
+    ? tablesEls.forEach((t) => t.classList.add("transX"))
+    : tablesEls.forEach((t) => t.classList.remove("transX"));
+});
