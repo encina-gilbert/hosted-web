@@ -154,10 +154,10 @@ const stationsData = {
 const materialsPerLine = {
   phd: ["A2C7825771500"],
   lsm: ["A2C7825760500"],
-  hli_2: ["A2C7822600500"],
-  hli_3: ["A2C7822600500"],
-  hli_4: ["A2C7822600500", "AAA2255290500"],
-  volvo_hcm: ["A2C7875820300"],
+  hli_2: ["A2C7822600500", "A2C7822720500"],
+  hli_3: ["A2C7822600500", "A2C7822720500"],
+  hli_4: ["A2C7822600500", "A2C7822720500", "AAA2255290500", "AAA2255300500"],
+  volvo_hcm: ["A2C7875830300", "A2C7875820300"],
 };
 
 // Materials description
@@ -168,7 +168,10 @@ const materialDescription = {
   A2C782576: "LCM LSM 2.2",
   // HLI
   A2C782260: "LCM MB MRA2 LECU RD 6K PSI5 SH",
+  A2C782272: "LCM MB MFA2 LECU RD 6K ANA Sh",
   AAA225529: "LCM MB MRA2 HLI4 11k CANterm",
+  AAA225530: "LCM MB MRA2 HLI4 11k PSI5",
   // VOLVO HCM
+  A2C787583: "LCM VOLVO HCM1.2_re MID",
   A2C787582: "LCM VOLVO HCM1.2_re HIGH",
 };
