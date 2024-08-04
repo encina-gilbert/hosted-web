@@ -156,7 +156,7 @@ const materialsPerLine = {
   lsm: ["A2C7825760500"],
   hli_2: ["A2C7822600500"],
   hli_3: ["A2C7822600500"],
-  hli_4: ["A2C7822600500"],
+  hli_4: ["A2C7822600500", "AAA2255290500"],
   volvo_hcm: ["A2C7875820300"],
 };
 
@@ -168,6 +168,7 @@ const materialDescription = {
   A2C782576: "LCM LSM 2.2",
   // HLI
   A2C782260: "LCM MB MRA2 LECU RD 6K PSI5 SH",
+  AAA225529: "LCM MB MRA2 HLI4 11k CANterm",
   // VOLVO HCM
   A2C787582: "LCM VOLVO HCM1.2_re HIGH",
 };
