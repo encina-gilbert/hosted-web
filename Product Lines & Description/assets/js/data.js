@@ -127,8 +127,8 @@ const stationsData = {
     gasket_assembly: ["BBS19270_L01S01"],
     eol: ["BBS19280_L01S01", "BBS19280_L01S02"],
     leak: ["BBS19290_L01S01", "BBS19290_L01S02"],
-    pin_check: ["BBS19300_L01S01"],
-    gasket_clip_check: ["BBS19306_L01S01"],
+    pin_check: ["BBS19300_L01S01", "BBS19300_L01S02"],
+    gasket_clip_check: ["BBS19306_L01S01", "BBS19306_L01S02"],
   },
   // MAGNA
   magna: {
