@@ -239,7 +239,7 @@ h3 {
 
 .table__container {
   overflow: hidden;
-  height: calc(var(--screen-height) - var(--nav-height) - 200px);
+  height: calc(100% - var(--nav-height) - 200px);
   width: 100%;
   max-width: 900px;
   margin-left: auto;
@@ -336,7 +336,7 @@ h3 {
   }
 
   .table__container {
-    height: calc(var(--screen-height) - var(--nav-height) - 150px);
+    height: calc(100% - var(--nav-height) - 150px);
     &.show {
       max-width: 550px;
     }
@@ -345,7 +345,7 @@ h3 {
 
 @media screen and (min-width: 900px) {
   .table__container {
-    height: calc(var(--screen-height) - var(--nav-height) - 100px);
+    height: calc(100% - var(--nav-height) - 100px);
 
     &.show {
       max-width: 900px;
