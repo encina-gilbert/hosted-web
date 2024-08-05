@@ -31,6 +31,7 @@ body {
   justify-content: center;
   font-weight: 300;
   height: var(--screen-height);
+  max-height: var(--screen-height);
   overflow-x: hidden;
 }
 
