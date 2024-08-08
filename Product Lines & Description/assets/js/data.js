@@ -26,7 +26,16 @@ const stationsData = {
   ford_ldm: {
     ict: ["BBS21110_L01S01"],
     flash: ["BBS21120_L01S01"],
+    milling: ["BBS21130_L01S01"],
+    pallet_association: ["BBS21160_L01S01"],
+    dispensing: ["BBS21150_L01S01"],
+    shield_assembly: ["BBS21200_L01S01"],
+    soldering: ["BBS21170_L01S01"],
+    aoi: ["BBS21180_L01S01"],
+    fixture_load: ["BBS21200_L01S01"],
     eol: ["BBS21210_L01S01", "BBS21210_L01S02"],
+    laser: ["BBS21220_L01S01"],
+    laser_check: ["BBS21230_L01S01"],
   },
   // HLI LINE 1
   hli_1: {
@@ -129,6 +138,7 @@ const stationsData = {
   // VOLVO HCM
   volvo_hcm: {
     pin_insertion: ["BBS04020_L04S01"],
+    milling: ["BBS19110_L01S01"],
     ict: ["BBS19120_L01S01", "BBS19120_L01S02"],
     flash: ["BBS19130_L01S01", "BBS19130_L01S02"],
     function: ["BBS19140_L01S01", "BBS19140_L01S02"],
@@ -175,6 +185,7 @@ const stationsData = {
 // Producing materials per line
 const materialsPerLine = {
   ford_bcm: ["A2C7883160400"],
+  ford_ldm: ["A2C7836920500"],
   phd: ["A2C7825771500"],
   lsm: ["A2C7825760500"],
   hli_1: ["A2C7637621000", "A2C7873960100"],
@@ -210,6 +221,8 @@ const materialsPerLine = {
 const materialDescription = {
   // FORD BCM
   A2C788316: "BCU FOR MY24 V363 ICA3 Var B W2",
+  // FORD LDM
+  A2C783692: "LCM FOR MY22 4i (NX7A-13B626-AG)",
   // PHD
   A2C782577: "LCM PHD 2.2",
   // LSM
