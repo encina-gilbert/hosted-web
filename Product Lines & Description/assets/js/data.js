@@ -38,19 +38,41 @@ const stationsData = {
   },
   // HLI LINE 2
   hli_2: {
+    pin_insertion: ["BBS04020_L01S01"],
+    milling: ["BBS04050_L02S01"],
     ict: ["BBS04060_L02S01"],
     flash: ["BBS04070_L02S01", "BBS04070_L02S02"],
     function: ["BBS04080_L02S01", "BBS04080_L02S02"],
+    shield_assembly: ["BBS04300_L02S01"],
+    gap_filler: ["BBS04340_L02S01"],
+    dow_corning: ["BBS04340_L02S01"],
+    gfdc: ["BBS04360_L02S01"],
+    housing_assembly: ["BBS04370_L02S01"],
+    screwing: ["BBS04380_L02S01"],
+    lasering: ["BBS04390_L02S01"],
+    laser_label: ["BBS04400_L02S01"],
     eol: ["BBS04210_L02S01", "BBS04210_L02S02"],
     leak: ["BBS04220_L02S01", "BBS04220_L02S02"],
+    pin_check: ["BBS04230_L02S01"],
   },
   // HLI LINE 3
   hli_3: {
+    pin_insertion: ["BBS04020_L01S01"],
+    milling: ["BBS04050_L03S01"],
     ict: ["BBS04060_L03S01"],
     flash: ["BBS04070_L03S01", "BBS04070_L03S02"],
     function: ["BBS04080_L03S01", "BBS04080_L03S02"],
+    shield_assembly: ["BBS04300_L03S01"],
+    gap_filler: ["BBS04340_L03S01"],
+    dow_corning: ["BBS04350_L03S01"],
+    gfdc: ["BBS04360_L03S01"],
+    housing_assembly: ["BBS04370_L03S01"],
+    screwing: ["BBS04380_L03S01"],
+    lasering: ["BBS04390_L03S01"],
+    laser_label: ["BBS04400_L03S01"],
     eol: ["BBS04210_L03S01", "BBS04210_L03S02"],
     leak: ["BBS04220_L03S01", "BBS04220_L03S02"],
+    pin_check: ["BBS04230_L03S01"],
   },
   // HLI LINE 4
   hli_4: {
@@ -155,13 +177,36 @@ const materialsPerLine = {
   ford_bcm: ["A2C7883160400"],
   phd: ["A2C7825771500"],
   lsm: ["A2C7825760500"],
-  hli_2: ["A2C7822600500", "A2C7822720500"],
-  hli_3: ["A2C7822600500", "A2C7822720500"],
-  hli_4: ["A2C7822600500", "A2C7822720500", "AAA2255290500", "AAA2255300500"],
+  hli_1: ["A2C7637621000", "A2C7873960100"],
+  hli_2: [
+    "A2C7822600500",
+    "A2C7822670500",
+    "A2C7822680500",
+    "A2C7822710500",
+    "A2C7822720500",
+  ],
+  hli_3: [
+    "A2C7822600500",
+    "A2C7822670500",
+    "A2C7822680500",
+    "A2C7822710500",
+    "A2C7822720500",
+  ],
+  hli_4: [
+    "A2C7822600500",
+    "A2C7822670500",
+    "A2C7822680500",
+    "A2C7822710500",
+    "A2C7822720500",
+    "AAA2255290500",
+    "AAA2255300500",
+  ],
   volvo_hcm: ["A2C7875830300", "A2C7875820300"],
 };
 
-// Materials description
+/**
+ * Material Descriptions
+ */
 const materialDescription = {
   // FORD BCM
   A2C788316: "BCU FOR MY24 V363 ICA3 Var B W2",
@@ -169,8 +214,14 @@ const materialDescription = {
   A2C782577: "LCM PHD 2.2",
   // LSM
   A2C782576: "LCM LSM 2.2",
-  // HLI
+  // HLI 1
+  A2C763762: "LCM MB RD 5CH HLI 3 Ana 50W",
+  A2C787396: "LCM MB MRA2 HLI4 11K ana CAN",
+  // HLI 2,3,4
   A2C782260: "LCM MB MRA2 LECU RD 6K PSI5 SH",
+  A2C782267: "LCM MB MFA2 LECU RD 5K PSI5 SH",
+  A2C782268: "LCM MB MFA2 LECU RD 5K ANA SH",
+  A2C782271: "LCM MB MFA2 LECU RD 6K PSI5 Sh",
   A2C782272: "LCM MB MFA2 LECU RD 6K ANA Sh",
   AAA225529: "LCM MB MRA2 HLI4 11k CANterm",
   AAA225530: "LCM MB MRA2 HLI4 11k PSI5",
