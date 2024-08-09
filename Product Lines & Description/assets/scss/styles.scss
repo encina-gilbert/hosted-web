@@ -341,7 +341,7 @@ h3 {
   }
 
   .table__container {
-    height: calc(100% - var(--nav-height) - 150px);
+    max-height: calc(100% - var(--nav-height) - 150px);
     &.show {
       max-width: 550px;
     }
@@ -350,7 +350,7 @@ h3 {
 
 @media screen and (min-width: 900px) {
   .table__container {
-    height: calc(100% - var(--nav-height) - 100px);
+    max-height: calc(100% - var(--nav-height) - 100px);
 
     &.show {
       max-width: 900px;
