@@ -4,7 +4,8 @@ let selectedLine = null;
 
 const selectedEl = document.querySelector(".selected");
 const optionsContainerEl = document.querySelector(".options");
-const searchBoxEl = document.getElementById("search-box");
+const searchBoxLineEl = document.getElementById("search-box__line");
+const searchBoxStationEl = document.getElementById("search-box__station");
 const tableEl = document.querySelector(".table__container");
 const tablesEls = tableEl.querySelectorAll(".table");
 const tableSwitch = document.getElementById("table__switch");
@@ -98,8 +99,8 @@ if (selectedEl) {
     checkForRadioSelected();
     if (isActive()) {
       tableEl.classList.remove("show");
-      searchBoxEl.value = "";
-      searchBoxEl.focus();
+      searchBoxLineEl.value = "";
+      searchBoxLineEl.focus();
     }
     optionsEl.forEach((o) => (o.style.display = "block"));
   });
@@ -116,12 +117,12 @@ if (optionsContainerEl) {
       checkForRadioSelected();
       unchecked();
       label.classList.add("checked");
-      searchBoxEl.value = "";
+      searchBoxLineEl.value = "";
     }
   });
 }
 
-searchBoxEl.addEventListener("keyup", (e) => {
+searchBoxLineEl.addEventListener("keyup", (e) => {
   filterList(e.target.value);
 });
 
