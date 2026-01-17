@@ -1,115 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="assets/img/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
-    <title>Products, Lines & Description</title>
-  </head>
-  <body>
-    <div class="container">
-      <nav>
-        <div class="continental__logo-container">
-          <img src="assets/img/continental.svg" alt="Continental-Logo" />
-          <!-- <img src="assets/img/continental.png" alt="Continental-Logo" /> -->
-        </div>
-        <div class="title__container">
-          <h3>Products, Lines & Descriptions</h3>
-        </div>
-      </nav>
-      <h3 class="title">Products, Lines & Descriptions</h3>
-      <div class="select__box">
-        <div class="options">
-          <!-- Options will be inserted through javascript -->
-        </div>
-        <div class="selected">Select Product Line</div>
-        <div class="search__box">
-          <input
-            type="text"
-            name=""
-            id="search-box__line"
-            placeholder="Start Typing..."
-          />
-        </div>
-        <div class="selection">
-          <span>Stations</span>
-          <label class="selection__switch">
-            <input type="checkbox" id="table__switch" />
-            <span class="slider"></span>
-          </label>
-          <span>Products</span>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <title>Products, Lines & Description</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div class="continental__logo-container">
+        <img src="assets/img/aumovio-white.png" alt="Aumovio logo" />
+        <!-- <img src="assets/img/continental.png" alt="Continental-Logo" /> -->
       </div>
-      <div class="table__container">
-        <div class="table" id="station__table">
-          <table>
-            <thead>
-              <tr>
-                <th class="p-zero">
-                  <div class="search__box">
-                    <input
-                      type="text"
-                      name=""
-                      id="search-box__station"
-                      placeholder="Search station..."
-                    />
-                  </div>
-                </th>
-                <th>Nest</th>
-                <th>Station</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <!-- Table data will be inserted through javascript -->
-            </tbody>
-          </table>
-        </div>
-        <div class="table" id="material__table">
-          <table>
-            <thead>
-              <tr>
-                <th>Material</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <!-- Table data will be inserted through javascript -->
-              <tr>
-                <td>A2C78000000_TEMPORY</td>
-                <td>DESCRIPTIONS_TEMP</td>
-              </tr>
-              <tr>
-                <td>A2C78000000_TEMPORY</td>
-                <td>DESCRIPTIONS_TEMP</td>
-              </tr>
-              <tr>
-                <td>A2C78000000_TEMPORY</td>
-                <td>DESCRIPTIONS_TEMP</td>
-              </tr>
-              <tr>
-                <td>A2C78000000_TEMPORY</td>
-                <td>DESCRIPTIONS_TEMP</td>
-              </tr>
-              <tr>
-                <td>A2C78000000_TEMPORY</td>
-                <td>DESCRIPTIONS_TEMP</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="title__container">
+        <h3>Products, Lines & Descriptions</h3>
+      </div>
+    </nav>
+    <div class="select__box">
+      <div class="options">
+        <!-- Options will be inserted through javascript -->
+      </div>
+      <div class="selected">Select Product Line</div>
+      <div class="search__box">
+        <input type="text" name="" id="search-box__line" placeholder="Start Typing..." />
+      </div>
+      <div class="selection">
+        <span>Stations</span>
+        <label class="selection__switch">
+          <input type="checkbox" id="table__switch" />
+          <span class="slider"></span>
+        </label>
+        <span>Products</span>
       </div>
     </div>
+    <div class="table__container">
+      <div class="table" id="station__table">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Nest</th>
+              <th>Station</th>
+            </tr>
+          </thead>
 
-    <script src="assets/js/data.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+          <tbody>
+            <!-- Table data will be inserted through javascript -->
+          </tbody>
+        </table>
+      </div>
+      <div class="table" id="material__table">
+        <table>
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- Table data will be inserted through javascript -->
+            <tr>
+              <td>A2C78000000_TEMPORY</td>
+              <td>DESCRIPTIONS_TEMP</td>
+            </tr>
+            <tr>
+              <td>A2C78000000_TEMPORY</td>
+              <td>DESCRIPTIONS_TEMP</td>
+            </tr>
+            <tr>
+              <td>A2C78000000_TEMPORY</td>
+              <td>DESCRIPTIONS_TEMP</td>
+            </tr>
+            <tr>
+              <td>A2C78000000_TEMPORY</td>
+              <td>DESCRIPTIONS_TEMP</td>
+            </tr>
+            <tr>
+              <td>A2C78000000_TEMPORY</td>
+              <td>DESCRIPTIONS_TEMP</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
