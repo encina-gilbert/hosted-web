@@ -1,3 +1,7 @@
+//-----------------------------------------------------------------//
+// STATION DATA                                                    //
+//-----------------------------------------------------------------//
+
 const stationsData = {
   // FORD BCM
   ford_bcm: {
@@ -15,6 +19,12 @@ const stationsData = {
     ict: ["BBS21110_L01S01"],
     flash: ["BBS21120_L01S01"],
     eol: ["BBS21210_L01S01", "BBS21210_L01S02"],
+  },
+  // FORD DCU / LGTL
+  "ford ( dcu / lgtl )": {
+    "ict / flash": ["BBS15010_L01S01"],
+    eol_1: ["BBS15100_L01S01"],
+    eol_2: ["BBS15100_L01S02"],
   },
   // HLI LINE 1
   hli_1: {
@@ -48,19 +58,13 @@ const stationsData = {
     eol: ["BBS04210_L04S01", "BBS04210_L04S02"],
     leak: ["BBS04220_L04S01", "BBS04220_L04S02"],
   },
-  // PHD
-  phd: {
+  // PHD / LSM
+  "phd / lsm": {
     ict: ["BBS23120_L01S01"],
     flash: ["BBS23130_L01S01", "BBS23130_L01S02"],
-    function: ["BBS23140_L01S01", "BBS23140_L01S02"],
+    "function (phd only)": ["BBS23140_L01S01", "BBS23140_L01S02"],
     eol: ["BBS23230_L01S01", "BBS23230_L01S02"],
-    leak: ["BBS23240_L01S01", "BBS23240_L01S02"],
-  },
-  // LSM
-  lsm: {
-    ict: ["BBS23120_L01S01"],
-    flash: ["BBS23130_L01S01", "BBS23130_L01S02"],
-    eol: ["BBS23230_L01S01", "BBS23230_L01S02"],
+    "leak (phd only)": ["BBS23240_L01S01", "BBS23240_L01S02"],
   },
   // VOLVO HCM
   volvo_hcm: {
@@ -79,7 +83,7 @@ const stationsData = {
   // SRM
   srm: {
     ict: ["BBS10030_L01S01"],
-    flash: ["BBS10040_L01S01"],
+    "flash / fkt" : ["BBS10040_L01S01"],
     eol: ["BBS10080_L01S01", "BBS10080_L01S02", "BBS10080_L01S03"],
   },
   // Volkswagen
@@ -96,15 +100,30 @@ const stationsData = {
     eol_2: ["BBS12120_L01S02"],
     eol_3: ["BBS12120_L01S03"],
     eol_4: ["BBS12120_L01S04"],
+  },
+  // Audi SCU
+  audi_scu: {
+    ict: ["BBS02030_L01S01"],
+    flash_1: ["BBS02040_L01S01"],
+    flash_2: ["BBS02040_L01S02"],
+    eol_1: ["BBS02060_L01S01"],
+    eol_2: ["BBS02060_L01S02"],
+  },
+  // ZKW
+  zkw: {
+    "ict / flash": ["BBS26130_L01S01"],
+    eol: ["BBS26220_L01S01"]
   }
 };
 
-// Producing materials per line
+//-----------------------------------------------------------------//
+// MATERIALS PER LINE                                              //
+//-----------------------------------------------------------------//
+
 const materialsPerLine = {
   ford_bcm: ["A2C7883160400"],
   ford_ldm: ["A2C7836920500"],
-  phd: ["A2C7825771500"],
-  lsm: ["A2C7825760500"],
+  "phd / lsm": ["A2C7825771500", "A2C7825760500"],
   hli_1: ["A2C7637621000", "A2C7873960100"],
   hli_2: [
     "A2C7822600500",
@@ -133,9 +152,10 @@ const materialsPerLine = {
   audi_ppe: ["AAA2213190600"]
 };
 
-/**
- * Material Descriptions
- */
+//-----------------------------------------------------------------//
+// MATERIAL DESCRIPTION                                            //
+//-----------------------------------------------------------------//
+
 const materialDescription = {
   // FORD BCM
   A2C788316: "BCU FOR MY24 V363 ICA3 Var B W2",
