@@ -7,12 +7,10 @@ const stationsData = {
   ford_bcm: {
     ict: ["BBS50110_L01S01"],
     flash: ["BBS50120_L01S01"],
-    eol: [
-      "BBS50210_L01S01",
-      "BBS50210_L01S02",
-      "BBS50210_L01S03",
-      "BBS50210_L01S04",
-    ],
+    eol_1a: ["BBS50210_L01S01"],
+    eol_1b: ["BBS50210_L01S02"],
+    eol_2a: ["BBS50210_L01S03"],
+    eol_2b: ["BBS50210_L01S04"],
   },
   // FORD LDM
   ford_ldm: {
