@@ -109,13 +109,13 @@ const stationsData = {
   },
   // Audi Key
   audi_key: {
-    "flash / pretest 1": [BBS13030_L01S01],
-    "flash / pretest 2": [BBS13030_L01S02],
-    eol_uhf_1: [BBS13200_L01S01],
-    eol_uhf_2: [BBS13200_L01S02],
-    eol_uhf_3: [BBS13200_L01S03],
-    eol_uwb1: [BBS13210_L01S01],
-    eol_uwb2: [BBS13210_L01S02],
+    "flash / pretest 1": ["BBS13030_L01S01"],
+    "flash / pretest 2": ["BBS13030_L01S02"],
+    eol_uhf_1: ["BBS13200_L01S01"],
+    eol_uhf_2: ["BBS13200_L01S02"],
+    eol_uhf_3: ["BBS13200_L01S03"],
+    eol_uwb1: ["BBS13210_L01S01"],
+    eol_uwb2: ["BBS13210_L01S02"],
   },
   // ZKW
   zkw: {
